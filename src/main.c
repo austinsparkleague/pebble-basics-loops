@@ -16,7 +16,7 @@ static void main_window_load(Window *window){
 //First thing is first, let's create a variable to hold the words that we want to put on the screen
 // a.k.a. a "string"
   static char output_string[1000] = "HELLO! ";
-//in this case we are specifying the maximum number of characters in the string, 1000
+//in this case we are specifying the maximum number of characters in the string, 1000  
   
   
 //We are going to need some way to determine what the coditions for running the loop again are.  
@@ -25,25 +25,28 @@ static void main_window_load(Window *window){
   int loop_counter = 0;
   
 
-  //WHILE LOOP
+  //WHILE LOOP----------------------------------------------------------------------------------------------
 //this is a while loop.  It will only run if the loop_counter variable is less than 3, and since we just 
 //assigned it the value of 0, this loop will run
 while(loop_counter < 3){
 
+  //if you haven't seen strcat(), before, just know that it stitches together text look it up on pebble dev documentation for more info.
   strcat(output_string, "hello again, ");
 
   loop_counter = loop_counter + 1;
 }
-  
+ 
 
-  //DO WHILE
+//DO WHILE LOOP---------------------------------------------------------------------------------------------
 //this is the do, while loop.  It will always run once, but will run more times if the condition defined after it is true.
   do{
     strcat(output_string, " and one last time");
   }
   while(loop_counter < 3);
+
+
   
- //FOR 
+//FOR LOOP-------------------------------------------------------------------------------------------------- 
 //this is the for loop.  It is a good multipurpose loop that allows for a great deal of flexiblity.
 //One handy thing about a for loop is that you create your own little counter variable that doesn't affect the rest of your code.
 //It does a couple of things right away.  It defines it's own counter; sets the condition; then advances the counter all in one little
@@ -51,6 +54,9 @@ while(loop_counter < 3){
   for(int i = 0; i < 4; i++){
     strcat(output_string, "! ");
   }
+
+  
+  
   
   
   //start playing with the code above and see if you can change the message, and the number of times that the message appears.
@@ -61,9 +67,9 @@ while(loop_counter < 3){
   Layer *window_layer = window_get_root_layer(window);
   text_layer = text_layer_create(GRect(0, 0, 144, 60));
   
-//------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
   text_layer_set_text(text_layer, output_string );
-//------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
   
   text_layer_set_text_color(text_layer, GColorBlack);
   
