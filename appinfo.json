@@ -1,0 +1,23 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "scottybrackett@gmail.com",
+    "longName": "the basics - Loops part 1",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "the basics - Loops part 1",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "9374f4e2-6adc-4ac9-8f34-c5238a943c3c",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
